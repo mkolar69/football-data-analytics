@@ -52,9 +52,9 @@ GROUP BY player_name
 HAVING SUM(minutes_played) >= 1000
 ORDER BY goals_per_90 DESC
 LIMIT 10;
-
+```
 ### B) Domácí dominance týmů (Výhernost doma)
-SQL
+```sql
 SELECT 
     home_club_name,
     COUNT(*) AS total_home_games,
@@ -67,26 +67,27 @@ GROUP BY home_club_name
 HAVING COUNT(*) >= 30
 ORDER BY home_win_percentage DESC
 LIMIT 10;
+```
+*(Všech 20 dotazů je dostupných ve složce `/sql/02_analysis_queries.sql`).*
 
-(Všech 20 dotazů je dostupných ve složce /sql/02_analysis_queries.sql).
+---
 
-📊 5. Power BI Dashboard
-Ukázka interaktivního reportu vytvořeného v Power BI:![Dashboard](screenshots/dashboard.png)
+## 📊 5. Power BI Dashboard
 
-Klíčové prvky dashboardu:
-KPI Karty: Celkový počet gólů, asistencí, odehraných zápasů a unikátních hráčů.
+Ukázka interaktivního reportu vytvořeného v Power BI:
 
-Filtry (Slicers): Možnost dynamického filtrování podle vybrané ligy a konkrétní sezóny.
+![Dashboard](screenshots/dashboard.png)
 
-TOP 10 Střelců: Pruhový graf zobrazující nejproduktivnější zakončovatele.
+### Klíčové prvky dashboardu:
+* **KPI Karty:** Celkový počet gólů, asistencí, odehraných zápasů a unikátních hráčů.
+* **Filtry (Slicers):** Možnost dynamického filtrování podle vybrané ligy a konkrétní sezóny.
+* **TOP 10 Střelců:** Pruhový graf zobrazující nejproduktivnější zakončovatele.
+* **Vývoj v čase:** Spojnicový graf vývoje počtu gólů napříč sezónami.
+* **Detailní tabulka:** Přehled hráčů s jejich pozicí, aktuálním klubem a součtem odehraných statistik.
 
-Vývoj v čase: Spojnicový graf vývoje počtu gólů napříč sezónami.
+---
 
-Detailní tabulka: Přehled hráčů s jejich pozicí, aktuálním klubem a součtem odehraných statistik.
-
-💡 6. Hlavní zjištění (Key Insights)
-Efektivita na 90 minut: Celkový počet gólů často zvýhodňuje hráče s delší kariérou, zatímco metrika Goals per 90 odhaluje reálnou okamžitou efektivitu útočníků.
-
-Výhoda domácího prostředí: Týmy vykazují v průměru o více než 15–20 % vyšší úspěšnost výher na domácím hřišti oproti zápasům venku.
-
-Distribuce tržní hodnoty: Nejvyšší průměrnou tržní hodnotu mají střední a křídelní útočníci, což odpovídá trendu globálního přestupového trhu.
+## 💡 6. Hlavní zjištění (Key Insights)
+* **Efektivita na 90 minut:** Celkový počet gólů často zvýhodňuje hráče s delší kariérou, zatímco metrika *Goals per 90* odhaluje reálnou okamžitou efektivitu útočníků.
+* **Výhoda domácího prostředí:** Týmy vykazují v průměru o více než 15–20 % vyšší úspěšnost výher na domácím hřišti oproti zápasům venku.
+* **Distribuce tržní hodnoty:** Nejvyšší průměrnou tržní hodnotu mají střední a křídelní útočníci, což odpovídá trendu globálního přestupového trhu.

@@ -1,0 +1,5 @@
+games.csv https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download&select=games.csv
+appearances.csv https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download&select=appearances.csv
+clubs.csv https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download&select=clubs.csv
+players.csv https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download&select=players.csv
+competitions.csv https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download&select=competitions.csv
